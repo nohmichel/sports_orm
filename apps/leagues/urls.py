@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import path
 from . import views
 
 urlpatterns = [
-	url(r"^$", views.index, name="index"),
-	url(r"^make_data/", views.make_data, name="make_data"),
+	path('', views.index, name="index"),
+	path('make_data', views.make_data, name="make_data"),
 ]
